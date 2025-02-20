@@ -1,0 +1,448 @@
+
+/* register Login  */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: Arial;
+} */
+
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right:0;
+  margin-top: auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  width: 400px;
+  text-align: center;
+}
+
+/* .app-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} */
+
+h2 {
+  margin-bottom: 20px;
+  color: #005393;
+  height: 40px;
+  border-bottom: 1px double black;
+  text-shadow:0 0 5px white,    
+  0 0 10px white,   
+  0 0 15px white,   
+  0 0 20px white;  
+}
+
+.form-group {
+   margin-bottom: 15px;
+  text-align: left;
+  margin-right:  25px ; 
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 720;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.reg-btn{
+  width: 100%;
+  padding: 15px;
+  background-color: #127AB5;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 12px; 
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #127AB5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+button:hover {
+  background-color: #005393;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+
+.logo{
+  position: absolute; 
+  top: 0px;
+  left: 0px;
+  width: 150px;
+  z-index: 1;
+}
+
+a {
+  font-size: 14px;
+  color: white;
+  padding-top: 8px;
+  text-decoration: none;
+}
+
+a:hover{
+color: black;
+}
+
+/* Home.css */
+.container {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 30px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-links a {
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.logout-icon {
+  fill: none;
+  stroke: white;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  width: 100%;
+  flex: 1;
+}
+
+.user-info {
+  background-color: #f3f4f6;
+  padding: 5px;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  margin-left: 20px;
+}
+
+.user-info p {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+/* Tagging Section */
+.tagging-section {
+  border: 1px solid #d1d5db;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.select-section {
+  border: 1px solid #d1d5db;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.current-user{
+  margin-left: 1rem;
+}
+
+.tagging-container{
+  display: flex;
+}
+
+.textarea-display{
+  margin-right: 20px;
+}
+
+.tagging-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.textareas {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.text-1 {
+  max-width: 1450px;
+  min-width: 1450px;
+  width: 100%;
+  max-height: 5rem;
+  min-height: 5rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.btn-nxt{
+  max-width: 150px;
+}
+
+.text-1-2 {
+  max-width: 800px;
+  min-width: 800px;
+  width: 100%;
+  max-height: 20rem;
+  min-height: 20rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.textareas-1-2{
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.text-2{
+  max-width: 1450px;
+  width: 1450px;
+  height: 8rem;
+  max-height: 10rem;
+  padding: 0.5rem;
+  border-radius: 2px;
+}
+
+.text-3{
+  max-width: 1000px;
+  min-width: 800px;
+  width: 100%;
+  height: 8rem;
+  max-height: 10rem;
+  padding: 0.5rem;
+  border-radius: 2px;
+}
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  width: 70px;
+}
+
+.buttons button {
+  padding: 3px 70px;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  border: 1px solid black;
+  margin-bottom: 50px;
+}
+
+.buttons .tag-sentence {
+  background-color: #10b981;
+  color: white;
+  border: none;
+}
+
+.buttons .save {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+}
+
+/* Tag List */
+.tag-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.tag-list p {
+  font-size: large;
+  margin-left: 20px;
+}
+
+.tags{
+  display: flex;
+  flex-direction: column;
+  height: 21rem;
+  width: 150px;
+  overflow-y: auto;
+  gap: 0.5rem;
+}
+
+.tags-sa{
+  display: flex;
+  gap: 0.5rem;
+  width: 80px;
+  min-width: 5px;
+  min-height: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.tag-list-na {
+  /* display: flex;
+  flex-wrap:wrap; */
+  margin-bottom: 20px;
+}
+.tags-na{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100px;
+  min-width: 5px;
+  min-height: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.tag {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Tag Colors */
+.tag-green {
+  background-color: #86efac;
+  color: black;
+  font-size:small;
+  font-weight: 600;
+}
+
+.tag-blue {
+  background-color: #93c5fd;
+  color: black;
+}
+
+.tag-orange {
+  background-color: #fdba74;
+  color: black;
+}
+
+.tag-teal {
+  background-color: #5eead4;
+  color: black;
+}
+
+.tag-yellow {
+  background-color: #fde047;
+  color: black;
+  font-size:small;
+  font-weight: 600;
+}
+
+.tag-light-yellow {
+  background-color: #fef9c3;
+  color: black;
+}
+
+.tag-purple {
+  background-color: #6d28d9;
+  color: white;
+}
+
+.tag-dark-yellow {
+  background-color: #facc15;
+  color: black;
+}
+
+.tag-dark-blue {
+  background-color: #3b82f6;
+  color: black;
+}
+
+.tag-dark-orange {
+  background-color: #fb923c;
+  color: black;
+}
+
+.tag-red {
+  background-color: #ef4444;
+  color: black;
+  font-size:small;
+  font-weight: 600;
+}
+
+.tag-dark-teal {
+  background-color: #14b8a6;
+  color: black;
+}
+
+.tag-dark-yellow {
+  background-color: #eab308;
+  color: black;
+}
