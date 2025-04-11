@@ -5,7 +5,7 @@ import logo from './logo.png'
 import axios from 'axios'
 
 const Register = () => {
-  const [user, setUser] = useState('');
+  const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
@@ -57,10 +57,7 @@ const Register = () => {
 
         {submitted?(navigate('/Register.jsx')):( 
         <form onSubmit={handleSubmit}>
-          {/* <select value={role} onChange={(e) => setRole(e.target.value)}>
-            <option value="Annotator">Annotator</option>
-            <option value="Contributor">Contributor</option>
-          </select> */}
+          
           <div className="form-group">
             <label htmlFor="name">Full Name</label>
             <input

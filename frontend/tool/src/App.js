@@ -13,14 +13,19 @@ import Sentimental from './Sentimental'
 import NamedAnnotation from './NamedAnnotation'
 import About from './About'
 import Performance from './Performance'
-
+import HomePage from './Homepage'
+import POS_Tagging from './pos_tagging'
+import NER from './NER'
+import SA from './SA'
+import LoginX from './LoginX'
+import RegisterX from './RegisterX'
 
 function App() {
   return (
     <div className="App">
       <ToastContainer />
         <Routes>
-          <Route path="/" element={<Login/>} />
+          <Route path="/" element={<LoginX/>} />
           <Route path="/register" element={<Register/>} />
           <Route path="/registerverify" element={<RegisterVerify/>}/>
           <Route path="/login" element={<Login/>} />
@@ -31,6 +36,12 @@ function App() {
           <Route path='/namedannotation' element={<NamedAnnotation/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/performance' element={<Performance/>}/>
+          <Route path='/homepage' element={<HomePage/>}/>
+          <Route path='/POS_tagger' element={<POS_Tagging/>}/>
+          <Route path='/NER' element={<NER/>}/>
+          <Route path='/SA' element={<SA/>}/>
+          <Route path='/loginX' element={<LoginX />} />
+          <Route path='/RegisterX' element={<RegisterX />} />
         </Routes>
         <Footer />
     </div>

@@ -40,10 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'base',
+    'loginSignup',
+
     'rest_framework',
+    'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -133,12 +138,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = "base:home"
 LOGOUT_REDIRECT_URL = "base:login"
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-}
-
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
@@ -178,6 +177,39 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_OBTAIN_SERIALIZER": "rest_framework_simplejwt.serializers.TokenObtainSlidingSerializer",
     "SLIDING_TOKEN_REFRESH_SERIALIZER": "rest_framework_simplejwt.serializers.TokenRefreshSlidingSerializer",
 }
+
 CORS_ALLOW_ALL_ORIGINS = True
 
 AUTH_USER_MODEL = 'base.User'
+
+STATICS_ROOT = 'os.path.join(BASE_DIR, "static")'
+
+INCLUDE_DIRS = ['saved_model','saved_files']
+
+#user
+AUTH_USER_MODEL = "base.User"
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    )
+}
+
+
+#UPLOAD_USER part
+import os
+
+# Specify the directory for uploaded files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/MU_uploads')
+
+# Ensure templates are recognized
+TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, 'templates')]
+
+UPLOAD_USER = {
+    "username": "uploader",
+    "password": "password123"  
+}
+
+LOGIN_URL = "/loginMU/"  # Ensure this matches your login route
+LOGOUT_REDIRECT_URL = "/loginMU/"

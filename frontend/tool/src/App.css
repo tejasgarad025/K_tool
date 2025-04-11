@@ -207,7 +207,8 @@ color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
+  margin-bottom: 80px;
+  height: 650px;
 }
 
 .select-section {
@@ -244,8 +245,8 @@ color: black;
 }
 
 .text-1 {
-  max-width: 1450px;
-  min-width: 1450px;
+  max-width: 1400px;
+  min-width: 1400px;
   width: 100%;
   max-height: 5rem;
   min-height: 5rem;
@@ -254,7 +255,14 @@ color: black;
 }
 
 .btn-nxt{
-  max-width: 150px;
+  max-width: 100px;
+  margin-left: 5px;
+}
+
+.btn-pos{
+  max-width: 200px;
+  margin-left: 5px;
+  font-size: 17px;
 }
 
 .text-1-2 {

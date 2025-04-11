@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Upload a File</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .upload-container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 360px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+            width: 100%;
+            align-items: center;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #219653;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #2d9cdb;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #444;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h2>Upload a File</h2>
+        
+        {% if message %}
+            <p class="success">{{ message }}</p>
+            <p>Total Lines in File: {{ file_size }}</p>
+            <p>File ID: {{ file_id }}</p>
+        {% endif %}
+        
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="file" required>
+            <br>
+            <button type="submit">Upload</button>
+        </form>
+        <a href="{% url 'process_files' %}">progress</a>
+        <br>
+        <a href="{% url 'upload_logout' %}">Logout</a>
+    </div>
+</body>
+</html>

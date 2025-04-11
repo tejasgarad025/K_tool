@@ -21,5 +21,6 @@ from base.views import get_user_profile
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/', get_user_profile, name='user-profile'),
-    path("", include(("base.urls", "base"), "base"))
+    path("", include(("base.urls", "base"), "base")),
+    path("auth/", include("base.urls")),
 ]
